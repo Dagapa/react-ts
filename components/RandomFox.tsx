@@ -1,9 +1,5 @@
-//generate a random function
-const random = () => Math.floor(Math.random() * 123) + 1;
+type Props = { image: string };
 
-export const RandomFox = (): JSX.Element => {
-  const image: string = `https://randomfox.ca/images/${random()}.jpg`;
-  console.log(image);
-
+export const RandomFox = ({ image }: Props): JSX.Element => {
   return <img width={320} height="auto" src={image} />;
 };
